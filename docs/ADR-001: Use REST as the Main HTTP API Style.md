@@ -18,18 +18,20 @@ GraphQL was considered, but we do not need complex queries now. GraphQL also nee
 
 Real-time communication is not decided in this ADR
 
-## Decision
+## Considered options
+* REST
+* GraphQl
+
+## Decision outcome
 
 We will use REST as the main HTTP API style
 
-## Consequences
+### Consequences
 
-REST is simple and good enough for current requirements.
+#### Positive
+* REST is simple and good enough for current requirements.
+* The API will be easier to implement and test for our current CRUD use cases.
 
-The API will be easier to implement and test for our current CRUD use cases.
-
-Developers can use common HTTP tools and standard HTTP methods.
-
-REST API documentation will need to be maintained separately, for example with OpenAPI.
-
-Some screens may need more than one API call to load all data
+#### Negative
+* REST API documentation will need to be maintained separately, for example with OpenAPI.
+* Some screens may need more than one API call to load all data
